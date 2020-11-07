@@ -1,27 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './modules/common/GlobalStyle';
+import NavBar from './modules/common/NavBar';
+
+const mainTheme = {
+  mainColor: '#1a252f',
+  secondaryColor: '#11181f',
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          <code>src/App.js</code>
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={mainTheme}>
+      <GlobalStyle />
+      <NavBar />
+    </ThemeProvider>
   );
 }
 export default App;
