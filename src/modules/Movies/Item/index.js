@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import ContentWrapper from './atoms/ContentWrapper';
 import Details from './atoms/Details';
@@ -5,13 +6,13 @@ import Image from './atoms/Image';
 import ImageWrapper from './atoms/ImageWrapper';
 import Wrapper from './atoms/Wrapper';
 
-const Item = () => (
-  <Wrapper>
+const Item = ({ data, ...rest }) => (
+  <Wrapper {...rest}>
     <ContentWrapper>
       <ImageWrapper>
-        <Image alt="una imagen" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/rd7ElSRYhN2CFqMcyH8rqrwLbd6.jpg" />
+        <Image alt={data.title} src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${data.poster_path}`} />
       </ImageWrapper>
-      <Details className="movie-details" />
+      <Details className="movie-details" data={data} />
     </ContentWrapper>
   </Wrapper>
 );
