@@ -21,7 +21,7 @@ function App() {
 
   return (
     <ThemeProvider theme={mainTheme}>
-      <SearchValueProvider value={[searchValue, setSearchValue]}>
+      <SearchValueProvider value={{ searchValue, setSearchValue }}>
         <GlobalStyle />
         <NavBar />
         <Container>
