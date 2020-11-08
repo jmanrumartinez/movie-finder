@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useMovies from '../../Hooks/useMovie';
+import useMovies from '../Hooks/useMovie';
 import Item from '../Item';
 import List from '../List';
 import GenreEnum from '../../../utils/enums/GenreEnum';

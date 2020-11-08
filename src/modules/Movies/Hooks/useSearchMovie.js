@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from 'react';
-import ApiClient from '../../utils/ApiClient';
-import PromiseEnum from '../../utils/enums/PromiseEnum';
-import AsyncReducer from '../common/Reducers/AsyncReducer';
+import ApiClient from '../../../utils/ApiClient';
+import PromiseEnum from '../../../utils/enums/PromiseEnum';
+import AsyncReducer from '../../common/Reducers/AsyncReducer';
 
 const useSearchMovie = (value) => {
   const [state, dispatch] = useReducer(AsyncReducer, {});

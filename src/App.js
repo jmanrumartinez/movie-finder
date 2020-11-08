@@ -4,11 +4,9 @@ import Container from './modules/common/Container';
 import { SearchValueProvider } from './modules/common/Context/SearchValueContext';
 import GlobalStyle from './modules/common/GlobalStyle';
 import NavBar from './modules/common/NavBar';
-import useSearchMovie from './modules/Hooks/useSearchMovie';
-import ComedyList from './modules/Movies/ComedyList';
-import TerrorList from './modules/Movies/TerrorList';
-import FantasyList from './modules/Movies/FantasyList';
-import AdventureList from './modules/Movies/AdventureList';
+import useSearchMovie from './modules/Movies/Hooks/useSearchMovie';
+import MovieList from './modules/Movies/MovieList';
+import GenreEnum from './utils/enums/GenreEnum';
 
 const mainTheme = {
   mainColor: '#1a252f',
@@ -25,13 +23,14 @@ function App() {
         <GlobalStyle />
         <NavBar />
         <Container>
-          <TerrorList />
-          <ComedyList />
-          <FantasyList />
-          <AdventureList />
+          <MovieList genre={GenreEnum.Horror} title="Novedades de Terror" />
+          <MovieList genre={GenreEnum.Comedy} title="Novedades de Comedia" />
+          <MovieList genre={GenreEnum.Fantasy} title="Novedades de Fantasia" />
+          <MovieList genre={GenreEnum.Adventure} title="Novedades de Aventura" />
         </Container>
       </SearchValueProvider>
     </ThemeProvider>
   );
 }
+
 export default App;

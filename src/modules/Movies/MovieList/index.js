@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import useMovies from '../../Hooks/useMovie';
+import PropTypes from 'prop-types';
+import useMovies from '../Hooks/useMovie';
 import Item from '../Item';
 import List from '../List';
-import GenreEnum from '../../../utils/enums/GenreEnum';
 import PromiseEnum from '../../../utils/enums/PromiseEnum';
 
-const AdventureList = () => {
+const AdventureList = ({ genre, title }) => {
   const [isExpandedList, setIsExpandedList] = useState(false);
-  const { data, status } = useMovies(GenreEnum.Adventure);
+  const { data, status } = useMovies(genre);
 
   return (
-    <List title="Novedades de Aventura" expand={isExpandedList}>
+    <List title={title} expand={isExpandedList}>
       {status === PromiseEnum.Resolved && data.results.map((movie) => movie.poster_path && (
         <Item
           key={movie.id}
@@ -21,6 +21,11 @@ const AdventureList = () => {
       ))}
     </List>
   );
+};
+
+AdventureList.propTypes = {
+  genre: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default AdventureList;
