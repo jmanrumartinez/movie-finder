@@ -6,5 +6,6 @@ export default styled.h3`
     font-size: 1em; 
     color: #ffffff;
     padding: 35px 10px 10px 10px; 
-    margin: -45px 0px 0px 0px; 
+    margin: 0; 
+    text-overflow: ellipsis;
 `;
