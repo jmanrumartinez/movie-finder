@@ -4,7 +4,6 @@ import Title from './atoms/ListTitle';
 import Wrapper from './atoms/ListWrapper';
 import ListContent from './atoms/ListContent';
 
-// eslint-disable-next-line react/prop-types
 const List = ({ title, children, expand }) => (
   <>
     <Title>{title}</Title>
@@ -18,6 +17,7 @@ const List = ({ title, children, expand }) => (
 
 List.propTypes = {
   title: PropTypes.string.isRequired,
+  expand: PropTypes.bool.isRequired,
 };
 
 export default List;
