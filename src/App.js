@@ -16,7 +16,7 @@ const mainTheme = {
 };
 
 function App() {
-  const [searchValue, setSearchValue] = useState();
+  const [searchValue, setSearchValue] = useState('');
   useSearchMovie(searchValue);
 
   return (
