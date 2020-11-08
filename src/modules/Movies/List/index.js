@@ -5,10 +5,10 @@ import Wrapper from './atoms/ListWrapper';
 import ListContent from './atoms/ListContent';
 
 // eslint-disable-next-line react/prop-types
-const List = ({ title, children }) => (
+const List = ({ title, children, expand }) => (
   <>
     <Title>{title}</Title>
-    <Wrapper>
+    <Wrapper expand={expand}>
       <ListContent>
         {children}
       </ListContent>
