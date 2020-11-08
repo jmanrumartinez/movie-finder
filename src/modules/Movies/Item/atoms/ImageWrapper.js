@@ -5,5 +5,4 @@ export default styled.div`
     width: 100%; 
     position: relative; 
     overflow: hidden; 
-    z-index: -1; 
 `;
