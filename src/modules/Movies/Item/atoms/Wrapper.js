@@ -6,4 +6,7 @@ export default styled.li`
     vertical-align: top;
     display: inline-block; 
     margin-right: 8px;
+    &:hover{
+        height: 303.45px; 
+    }
 `;
