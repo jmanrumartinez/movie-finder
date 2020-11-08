@@ -13,8 +13,8 @@ describe('ApiClient', () => {
 
   it('get a movie', async () => {
     const movieId = 337401;
-    const baseUrl = process.env.REACT_APP_API_URL;
-    const movieDetails = await ApiClient.get(`${baseUrl}movie/${movieId}`, {
+
+    const movieDetails = await ApiClient.get(`movie/${movieId}`, {
       language: 'es',
     });
     expect(movieDetails.id).toEqual(movieId);

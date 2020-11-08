@@ -1,3 +1,5 @@
+const baseUrl = process.env.REACT_APP_API_URL;
+
 export default class ApiClient {
   static objectToParams(params) {
     if (Object.keys(params).length === 0) return '';
@@ -16,7 +18,7 @@ export default class ApiClient {
   static get(url = '', params = {}, headers = {}) {
     // eslint-disable-next-line no-param-reassign
     params = { ...params, api_key: process.env.REACT_APP_API_KEY };
-    return fetch(`${url}?${this.objectToParams(params)}`, {
+    return fetch(`${baseUrl}${url}?${this.objectToParams(params)}`, {
       method: 'GET',
       headers,
     }).then((res) => res.json());
