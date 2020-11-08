@@ -2,6 +2,8 @@
 
 This project was done in a weekend to settle some JS knowledge with React, Hooks, managing Promises, also integrated Styled Components, it was my first time using it :)
 
+![Movie Finder Overview](https://github.com/jmanrumartinez/movie-finder/blob/master/public/assets/movie-finder-overviewGIF.gif)
+
 ## Extra-Info
 
 If you want to check it, remind to add the needed keys to .ENV vars.
