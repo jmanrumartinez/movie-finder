@@ -1,4 +1,4 @@
-# Movie Finder
+# Movie Finder (WIP)
 
 This project was done in a weekend to settle some JS knowledge with React, Hooks, managing Promises, also integrated Styled Components, it was my first time using it :)
 
